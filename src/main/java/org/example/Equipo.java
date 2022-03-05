@@ -11,6 +11,17 @@ public class Equipo {
     private String DG;
     private String puntos;
 
+    public Equipo(String nombre, String PJ, String PG, String PE, String PP, String GF, String GC, String DG, String puntos) {
+        this.nombre = nombre;
+        this.PJ = PJ;
+        this.PG = PG;
+        this.PE = PE;
+        this.PP = PP;
+        this.GF = GF;
+        this.GC = GC;
+        this.DG = DG;
+        this.puntos = puntos;
+    }
 
     public Equipo(String nombre) {
         this.nombre = nombre;
