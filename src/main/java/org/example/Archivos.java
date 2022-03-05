@@ -2,9 +2,7 @@ package org.example;
 
 import javafx.scene.control.Alert;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Archivos {
@@ -41,6 +39,38 @@ public class Archivos {
         return true;
     }
 
+    public static void posiciones() {
+        for (int i = 0; i < equipos.size(); i++) {
+            for (int j = i + 1; j < equipos.size(); j++) {
+                int puntos1 = Integer.parseInt(equipos.get(i).getPuntos());
+                int puntos2 = Integer.parseInt(equipos.get(j).getPuntos());
+                if (puntos1 < puntos2) {
+                    Equipo aux = equipos.get(i);
+                    equipos.set(i, equipos.get(j));
+                    equipos.set(j, aux);
+                }
+            }
+        }
+    }
+
+    public static boolean loadArchivo() {
+        try {
+            String ruta = "equipos.txt";
+            FileReader fr = new FileReader(ruta);
+            BufferedReader br = new BufferedReader(fr);
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(" ");
+                equipos.add(new Equipo(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7], datos[8]));
+            }
+            br.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
     public static boolean deleteTeam(String name) {
         for (Equipo e : equipos) {
             if (e.getNombre().equals(name)) {
@@ -61,4 +91,6 @@ public class Archivos {
         }
         return false;
     }
+
+
 }
