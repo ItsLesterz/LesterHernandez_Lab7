@@ -25,32 +25,32 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Pane fx:id="Crear" layoutX="33.0" layoutY="142.0" prefHeight="144.0" prefWidth="238.0" visible="false">
+            <Pane fx:id="Crear" layoutX="33.0" layoutY="130.0" prefHeight="144.0" prefWidth="238.0" visible="false">
                <children>
                   <TextField fx:id="nameTeamC" layoutX="31.0" layoutY="60.0" prefHeight="25.0" prefWidth="176.0" promptText="Ingrese nombre equipo" />
                   <Button fx:id="Create" layoutX="93.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#OnCreateClicked" text="Crear" />
                   <Button fx:id="BackP" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnbacEClicked" text="Salir" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="18.0" prefHeight="17.0" prefWidth="96.0" text="Crear Equipo" />
-                  <Pane fx:id="DeleteT" layoutX="-13.0" prefHeight="144.0" prefWidth="265.0">
-                     <children>
-                        <Button fx:id="delete_btn" layoutX="103.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#OnDeleteClicked" text="Eliminar" />
-                        <Button fx:id="backE" layoutX="202.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnbackEClicked" text="Atras" />
-                        <Label alignment="CENTER" layoutX="85.0" layoutY="14.0" prefHeight="25.0" prefWidth="96.0" text="Eliminar Equipo" />
-                        <TextField fx:id="nameD" layoutX="48.0" layoutY="72.0" prefHeight="25.0" prefWidth="176.0" promptText="Ingrese Equipo" />
-                     </children>
-                  </Pane>
-                  <Pane fx:id="paneLoad" layoutX="24.0" layoutY="22.0" prefHeight="100.0" prefWidth="182.0">
-                     <children>
-                        <Button fx:id="loadA" layoutX="44.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#loadA" text="Cargar Archivo" />
-                        <Button fx:id="backL" layoutX="72.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#BackL" text="Salir" />
-                     </children>
-                  </Pane>
                </children>
             </Pane>
             <Pane fx:id="paneT" layoutY="62.0" prefHeight="244.0" prefWidth="301.0" visible="false">
                <children>
                   <ListView fx:id="listView" layoutX="-1.0" layoutY="7.0" prefHeight="200.0" prefWidth="301.0" />
                   <Button fx:id="backT" layoutX="125.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#BackT" text="Regresar" />
+               </children>
+            </Pane>
+            <Pane fx:id="DeleteT" layoutX="18.0" layoutY="259.0" prefHeight="144.0" prefWidth="265.0" visible="false">
+               <children>
+                  <Button fx:id="delete_btn" layoutX="103.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#OnDeleteClicked" text="Eliminar" />
+                  <Button fx:id="backE" layoutX="202.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnbackEClicked" text="Atras" />
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="14.0" prefHeight="25.0" prefWidth="96.0" text="Eliminar Equipo" />
+                  <TextField fx:id="nameD" layoutX="48.0" layoutY="72.0" prefHeight="25.0" prefWidth="176.0" promptText="Ingrese Equipo" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneLoad" layoutX="60.0" layoutY="42.0" prefHeight="100.0" prefWidth="182.0" visible="false">
+               <children>
+                  <Button fx:id="loadA" layoutX="44.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#loadA" text="Cargar Archivo" />
+                  <Button fx:id="backL" layoutX="72.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#BackL" text="Salir" />
                </children>
             </Pane>
          </children>
